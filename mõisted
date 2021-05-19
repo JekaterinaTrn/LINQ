@@ -1,0 +1,74 @@
+LINQ - (Language Integrated Query)  is uniform query syntax in C# and VB.NET to retrieve data from different sources and formats.
+
+Where - operaator (Linqi laiendusmeetod) filtreerib kogu etteantud kriteeriumiväljenduse põhjal ja tagastab uue kogu.
+
+OfType - operaator filtreerib kogu vastavalt võimalusele valada kollektsiooni element määratud tüüpi.
+
+ThenBy - Kasutage meetodit pärast OrderBy, et sortida kollektsioon teisele väljale kasvavas järjekorras.
+Linq sorteerib kogu esmalt OrderBy meetodil määratud esmase välja põhjal ja seejärel sorteerib saadud kogu uuesti kasvavas järjekorras,
+lähtudes ThenBy meetodiga määratud teisest väljast.
+
+GroupBy / ToLookup -  operaator tagastab antud kogust elementide rühma mõne põhiväärtuse põhjal.  /  ToLookup on sama mis GroupBy; 
+ainus erinevus on see, et GroupBy käivitamine lükatakse edasi, samas kui ToLookupi täitmine toimub kohe. Samuti on ToLookup rakendatav ainult meetodi süntaksis.
+
+Join - See tagastab uue kogu, mis sisaldab mõlema kogu elemente, mis vastavad määratletud avaldisele.
+
+GroupJoin - Operaator GroupJoin täidab sama ülesannet nagu operaator Liitumine, välja arvatud see, et GroupJoin tagastab tulemuse grupis määratud grupivõtme põhjal.
+
+Select - Operaator Select tagastab alati IEnumerable kogu, mis sisaldab teisendusfunktsioonil põhinevaid elemente.
+
+All / Any - Operaator All hindab antud kogumiku kõiki elemente määratud tingimustel ja tagastab väärtuse True, kui kõik elemendid vastavad tingimusele.
+/ Any -  Kas kontrollitakse, kas mõni element vastab antud tingimusele või mitte?
+
+Contains - Operaator Contains kontrollib, kas kogumis on määratud element või mitte, ja tagastab tõeväärtuse.
+
+Aggregate -  Liitmisoperaatorid teostavad kollektsiooni elementide numbrilisel omadusel matemaatilisi toiminguid, nagu Keskmine, Aggregate, Count, Max, Min ja Sum.
+
+Average - meetod arvutab kogu arvuliste üksuste keskmise. Keskmine meetod tagastab null- või nullivaba kümnend-, topelt- või ujukväärtuse.
+
+Count - Operaator Count tagastab kogumis olevate elementide arvu või antud tingimuse täitnud elementide arvu.
+
+Max - Meetod Max () tagastab kogu suurima arvulise elemendi.
+
+Sum - Sum () meetod arvutab kogu arvuliste üksuste summa.
+
+ElementAt - Tagastab elemendi kogu määratud indeksis.
+ElementAtOrDefault - Tagastab elemendi kogu määratud indeksis või vaikeväärtuse, kui indeks jääb vahemikust välja.
+
+First - Tagastab kogu esimese elemendi või esimese elemendi, mis vastab tingimusele.
+FirstOrDefault - Tagastab kogu esimese elemendi või esimese elemendi, mis vastab tingimusele. Tagastab vaikeväärtuse, kui indeks jääb vahemikust välja.
+
+Last - Tagastab kogu elemendi viimase elemendi või tingimuse rahuldava viimase elemendi
+LastOrDefault - Tagastab kogu elemendi viimase elemendi või tingimuse rahuldava viimase elemendi. Tagastab vaikeväärtuse, kui sellist elementi pole.
+
+Single - Tagastab kogu ainsa elemendi või ainsa tingimuse täitva elemendi. Kui Single () ei leidnud kollektsioonist ühtegi elementi või rohkem kui ühte elementi, 
+viskab InvalidOperationException.
+SingleOrDefault - Sama mis üksik, ainult et see tagastab määratud üldise tüübi vaikeväärtuse, selle asemel et visata erand,
+kui määratud tingimusele ei leitud ühtegi elementi. Kuid see viskab InvalidOperationExceptioni, kui leidis kollektsioonis määratud tingimuse jaoks rohkem kui ühe elemendi.
+
+SequenceEqual - meetod kontrollib, kas elementide arv, iga elemendi väärtus ja elementide järjestus kahes kollektsioonis on võrdne või mitte.
+
+Concat () -  meetod lisab kaks sama tüüpi jada ja tagastab uue järjestuse (kogu).
+
+DefaultIfEmpty () tagastab uue kollektsiooni vaikeväärtusega, kui antud kollektsioon, millele DefaultIfEmpty () kutsutakse, on tühi.
+
+Empty	- Tagastab tühja kogu.
+Range - Genereerib IEnumerable <T> -tüübi kogumi koos kindla arvu järjestikuste väärtustega elementidega, alustades esimesest elemendist. 
+Repeat - Genereerib IEnumerable <T> -tüübi kogu koos määratud arvu elementidega ja iga element sisaldab sama määratud väärtust. 
+
+Distinct - Tagastab kogust erinevad väärtused. 
+
+Except - Tagastab kahe järjestuse erinevuse, mis tähendab ühe kogu elemente, mida teises kogumikus ei esine. 
+
+Intersect - Tagastab kahe järjestuse ristumiskoha, mis tähendab elemente, mis ilmuvad mõlemas kogumikus. 
+
+Union - Tagastab unikaalsed elemendid kahest järjestusest, mis tähendab unikaalseid elemente, mis ilmuvad mõlemas järjestuses. 
+
+Skip - Jätab elemendid kindlaksmääratud asendisse, alustades järjestuse esimesest elemendist. 
+
+SkipWhile - Tühistab tingimusel põhinevad elemendid seni, kuni element ei vasta tingimusele. Kui esimene element ise tingimust ei rahulda,
+jätab ta 0 elemendi vahele ja tagastab kõik järjestuse elemendid.
+
+Take - Laiendusmeetod Take () tagastab määratud arvu elemente alates esimesest elemendist.
+
+TakeWhile  -Laiendusmeetod TakeWhile () tagastab antud kogust elemendid, kuni määratud tingimus on tõene.
